@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1655228326422" clover="3.2.0">
+  <project timestamp="1655228326422" name="All files">
+    <metrics statements="107" coveredstatements="89" conditionals="54" coveredconditionals="41" methods="35" coveredmethods="29" elements="196" coveredelements="159" complexity="0" loc="107" ncloc="107" packages="16" files="16" classes="16"/>
+    <package name="Components.atoms.Avatar">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/atoms/Avatar/index.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.atoms.Button">
+      <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/atoms/Button/index.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="5" count="15" type="stmt"/>
+        <line num="108" count="34" type="stmt"/>
+        <line num="110" count="34" type="cond" truecount="2" falsecount="0"/>
+        <line num="117" count="34" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.atoms.IconButton">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/atoms/IconButton/index.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.atoms.IconText">
+      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/atoms/IconText/index.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="41" count="56" type="stmt"/>
+        <line num="42" count="56" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="56" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.atoms.Icons">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Icons.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/atoms/Icons/Icons.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="18" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.molecules.Cards">
+      <metrics statements="40" coveredstatements="29" conditionals="32" coveredconditionals="21" methods="7" coveredmethods="6"/>
+      <file name="index.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/molecules/Cards/index.tsx">
+        <metrics statements="40" coveredstatements="29" conditionals="32" coveredconditionals="21" methods="7" coveredmethods="6"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="66" count="10" type="stmt"/>
+        <line num="68" count="10" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="71" count="10" type="stmt"/>
+        <line num="73" count="10" type="stmt"/>
+        <line num="75" count="10" type="stmt"/>
+        <line num="77" count="10" type="stmt"/>
+        <line num="78" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="79" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="82" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="83" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="90" count="10" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="99" count="10" type="stmt"/>
+        <line num="100" count="1" type="stmt"/>
+        <line num="103" count="10" type="stmt"/>
+        <line num="104" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="107" count="8" type="stmt"/>
+        <line num="111" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="112" count="3" type="stmt"/>
+        <line num="122" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="123" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="125" count="1" type="stmt"/>
+        <line num="135" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="137" count="1" type="stmt"/>
+        <line num="148" count="2" type="stmt"/>
+        <line num="162" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="163" count="1" type="stmt"/>
+        <line num="175" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="176" count="1" type="stmt"/>
+        <line num="187" count="10" type="stmt"/>
+        <line num="207" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.molecules.CardsList">
+      <metrics statements="12" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="3"/>
+      <file name="index.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/molecules/CardsList/index.tsx">
+        <metrics statements="12" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="3"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="4" type="stmt"/>
+        <line num="38" count="4" type="stmt"/>
+        <line num="42" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="56" count="4" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.molecules.Editorial">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/molecules/Editorial/index.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="31" count="16" type="stmt"/>
+        <line num="38" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.molecules.SearchBar">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="SearchBar.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/molecules/SearchBar/SearchBar.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.molecules.Tabs">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/molecules/Tabs/index.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.organisms.Banner">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/organisms/Banner/index.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.organisms.ExtendedNav">
+      <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <file name="index.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/organisms/ExtendedNav/index.tsx">
+        <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="63" count="36" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.organisms.Footer">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/organisms/Footer/index.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Components.organisms.Header">
+      <metrics statements="19" coveredstatements="17" conditionals="8" coveredconditionals="7" methods="5" coveredmethods="4"/>
+      <file name="index.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Components/organisms/Header/index.tsx">
+        <metrics statements="19" coveredstatements="17" conditionals="8" coveredconditionals="7" methods="5" coveredmethods="4"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="8" type="stmt"/>
+        <line num="28" count="8" type="stmt"/>
+        <line num="30" count="8" type="stmt"/>
+        <line num="32" count="8" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="36" count="8" type="stmt"/>
+        <line num="38" count="8" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="43" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="58" count="7" type="stmt"/>
+        <line num="73" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="85" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="Data">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Navigation.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/Data/Navigation.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="23" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="api">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="api.tsx" path="/home/saisrm/zemoso/React/blinklist-app/src/api/api.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>

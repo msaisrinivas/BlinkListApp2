@@ -63,7 +63,6 @@
       "<rootDir>/src/reportWebVitals.ts",
       "<rootDir>/src/Components/Pages/",
       "<rootDir>/src/Components/molecules/Cards",
-      "<rootDir>/src/Components/molecules/CardsList",
       "<rootDir>/src/api/api.tsx",
       ".stories.tsx"
     ]

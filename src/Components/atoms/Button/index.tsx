@@ -143,7 +143,7 @@ function Buttons(props: Props) {
     className = classes.readNow;
   }
   else{
-    className = classes.exploreNoH;;
+    className = classes.exploreNoH;
   }
   return (
     <StyledEngineProvider injectFirst>

@@ -46,13 +46,9 @@ function CardsList(props: Props) {
       }
     | {
         31: number;
-        0?: undefined;
-        100?: undefined;
       }
     | {
         100: number;
-        0?: undefined;
-        31?: undefined;
       };
   if (props.checkComplete === 0) {
     operCheck = { 0: 0, 31: 31, 100: 100 };

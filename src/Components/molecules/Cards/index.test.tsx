@@ -47,3 +47,16 @@ it("Cards Test For Finished true",async () => {
     const CardsElement = screen.getByRole("button");
     expect(CardsElement).toBeInTheDocument();
 })
+
+it("Cards Test For ReadAgain true",async () => {
+    render(<BrowserRouter> <Cards id={0} image={""} bookName={"Don't ask"} authorName={"Erica"} read={"13"} time={0} readAgain={true} progressValues={31} progress={true}></Cards> </BrowserRouter>);
+    const CardsElement = screen.getByRole("button");
+    expect(CardsElement).toBeInTheDocument();
+})
+
+it("Cards Test For Finished Click Test",async () => {
+    render(<BrowserRouter> <Cards id={1} image={""} bookName={"Don't ask"} authorName={"Erica"} read={"13"} time={0} finished={true} progressValues={31} progress={true}></Cards> </BrowserRouter>);
+    const CardsElement = screen.getByRole("button");
+    fireEvent.click(CardsElement)
+    expect(CardsElement).toBeInTheDocument();
+})

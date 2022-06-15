@@ -69,7 +69,7 @@ function ExtendedNav() {
                 <Link
                   sx={{ textDecoration: "None" }}
                   onClick={allBooksPage}
-                  data-testid={"link-a"}
+                  data-testid={"link-a"+key}
                 >
                   <IconText
                     name={data.title}

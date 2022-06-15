@@ -31,15 +31,15 @@ const useStyles = makeStyles({
   }
 });
 
-interface props {
+interface Props {
   name: string;
   icon: React.ReactNode;
   styling:string
 }
 
-function IconText(props: props) {
+function IconText(props: Props) {
   const classes = useStyles();
-  var styles = props.styling === "extended"? classes.extended : classes.cardText;
+  let styles = props.styling === "extended"? classes.extended : classes.cardText;
   return (
       <Typography component="div" className={styles}>
         <Box className="iconi">{props.icon}</Box>

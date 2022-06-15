@@ -17,12 +17,12 @@ const useStyle=makeStyles({
   },
 });
 
-interface props{
+interface Props{
   listHead:string;
   listingItems:string[];
 }
 
-function Editorial(props:props) {
+function Editorial(props:Props) {
 
   const classes = useStyle();
 

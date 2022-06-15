@@ -1,15 +1,14 @@
 import React from 'react'
 import './SearchBar.css'
 import { InputBase } from '@mui/material';
-// import SearchIcon from "@mui/icons-material/Search";
 import {ReactComponent as SearchIcon} from "../../../images/search.svg";
 
 
-interface props{
+interface Props{
     palceholder:string
 }
 
-function SearchBar(props:props) {
+function SearchBar(props:Props) {
   return (
     //materail ui search bar
     <div className='search'>

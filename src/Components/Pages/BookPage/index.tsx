@@ -102,8 +102,8 @@ function BookTemplate(props:props) {
               icon={<Time style={{ height: "16.67px", width: "16.67px" }} />}
               styling={"cardText"}
             />
-            <Box display="flex" justifyContent={"space-between"} paddingTop={"50px"}>
-              <Buttons name={"Read Now"} onClick={undefined} classing={""} icon={undefined} end={undefined}></Buttons>
+            <Box display="flex" justifyContent={"space-between"} paddingTop={"50px"} width={"90%"}>
+              <Buttons name={"Read Now"} onClick={undefined} classing={"readNow"} icon={undefined} end={undefined}></Buttons>
               <Buttons name={"Finished Reading"} onClick={undefined} classing={"connect"} icon={undefined} end={undefined}></Buttons>
               <Buttons name={"send to Kindle"} onClick={undefined} classing={"exploreNoH"} icon={undefined} end={<RightArrow/>}></Buttons>
             </Box>

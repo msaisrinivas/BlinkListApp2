@@ -46,7 +46,7 @@ interface BookProps {
   aboutAuthor: string;
 }
 
-interface props {
+interface Props {
   id: number;
   image: string;
   bookName: string;
@@ -61,7 +61,7 @@ interface props {
   key?: number;
 }
 
-function MediaCards(props: props) {
+function MediaCards(props: Props) {
 
   let navigate = useNavigate();
 
@@ -79,9 +79,20 @@ function MediaCards(props: props) {
       if (books !== undefined) {
         books.complete = 100;
       }
-    } else if (props.readAgain || props.librarybu) {
+    } else if (props.readAgain) {
       if (books !== undefined) {
         books.complete = 31;
+      }
+    }
+    else if(props.librarybu){
+      if (books !== undefined) {
+        if(books.complete === 0 || books.complete === 100)
+        {
+          books.complete = 31;
+        }
+        else{
+          books.complete = 100;
+        }
       }
     }
     await api.put("http://localhost:3001/books/" + props.id + "/", books);

@@ -24,3 +24,9 @@ it("Check for ExploreNoH Button", async()=>{
     const MuiElement = screen.getByText(/Connect/i);
     expect(MuiElement).toBeInTheDocument();
 })
+
+it("Check for ReadNow Button", async()=>{
+    render(<Buttons name={"Connect"} onClick={undefined} classing={"readNow"} icon={undefined} end={undefined}/>);
+    const MuiElement = screen.getByText(/Connect/i);
+    expect(MuiElement).toBeInTheDocument();
+})

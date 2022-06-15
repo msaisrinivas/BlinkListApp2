@@ -2,22 +2,22 @@ import { Avatar} from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React from 'react';
 
-const useStyles=makeStyles( theme => ({
+const useStyles=makeStyles({
   avatar:{
     height: '44px',
     width: '44px',
   }
-}));
+});
 
  
 
-interface props
+interface Props
 {
     chars?:string;
 }
 
 
-function Avatars(props:props) {
+function Avatars(props:Props) {
 
   const classes = useStyles();
 

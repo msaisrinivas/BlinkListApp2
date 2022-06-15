@@ -2,14 +2,12 @@ import { makeStyles } from "@mui/styles";
 import { Button, StyledEngineProvider } from "@mui/material";
 import React from "react";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   connect: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-
-    // padding: "12px 116px",
     gap: "10px",
 
     fontFamily: "Cera Pro",
@@ -53,9 +51,29 @@ const useStyles = makeStyles((theme) => ({
     height: "auto",
 
     backgroundColor: "White",
-    color: "black",
+    color: "#6D787E",
     outline: "none",
-    // borderBottom: "solid 0px white",
+    textTransform: "none",
+    boxShadow: "none",
+    fontSize:"17px",
+    lineHeight:"20px",
+    textAlign:"start",
+    marginLeft:"-10px",
+    "&:hover": {
+      backgroundColor: "White",
+      color: "black",
+      boxShadow: "none",
+    },
+  },
+
+  readNow: {
+    width: "25%",
+    height: "auto",
+
+    backgroundColor: "White",
+    color: "#22C870",
+    outline: "none",
+    border: "solid 1px black",
     textTransform: "none",
     boxShadow: "none",
     "&:hover": {
@@ -93,9 +111,10 @@ const useStyles = makeStyles((theme) => ({
       color: "white",
     },
   },
-}));
+  
+});
 
-interface props {
+interface Props {
   name: string;
   onClick: any;
   classing: string;
@@ -104,16 +123,28 @@ interface props {
   disabled?:boolean;
 }
 
-function Buttons(props: props) {
+function Buttons(props: Props) {
   const classes = useStyles();
-  var className =
-    props.classing === "connect"
-      ? classes.connect
-      : props.classing === "explore"
-      ? classes.explore
-      : props.classing === "library"
-      ? classes.library
-      : classes.exploreNoH;
+  let className ;
+  if(props.classing === "connect")
+  {
+    className = classes.connect;
+  }
+  else if(props.classing === "explore")
+  {
+    className = classes.explore;
+  }
+  else if(props.classing === "library")
+  {
+    className = classes.library;
+  }
+  else if(props.classing === "readNow")
+  {
+    className = classes.readNow;
+  }
+  else{
+    className = classes.exploreNoH;;
+  }
   return (
     <StyledEngineProvider injectFirst>
       <Button

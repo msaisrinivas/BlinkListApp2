@@ -8,13 +8,11 @@ it("Extended Navigation Test",async () => {
     expect(ExtendedElement).toBeInTheDocument();
 })
 
-// test("Click in Extended Navigation Test",async () => {
-//     render(<BrowserRouter> <ExtendedNav/> </BrowserRouter>);
-//     // eslint-disable-next-line testing-library/no-node-access
-//     const ExtendedElement = screen.getByTestId("link-a").firstChild?.firstChild?.firstChild;
-//     // eslint-disable-next-line testing-library/no-node-access
-//     fireEvent.click(ExtendedElement , {target:{}})
+test("Click in Extended Navigation Test",async () => {
+    render(<BrowserRouter> <ExtendedNav/> </BrowserRouter>);
+    // eslint-disable-next-line testing-library/no-node-access
+    const ExtendedElement = screen.getByTestId("link-a0");
 
-    
-//     expect(ExtendedElement).toBe("");
-// })
+    fireEvent.click(ExtendedElement , {target:{}})
+    expect(ExtendedElement).toBeInTheDocument();
+})

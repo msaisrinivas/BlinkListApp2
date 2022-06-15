@@ -18,14 +18,14 @@ interface BookProps {
   aboutAuthor: string;
 }
 
-interface props {
+interface Props {
   librarybu?: boolean;
   finished?: boolean;
   readAgain?: boolean;
   checkComplete: number;
 }
 
-function CardsList(props: props) {
+function CardsList(props: Props) {
   const [books, setBooks] = useState<BookProps[]>([]);
 
   const getBooks = async () => {
@@ -38,14 +38,31 @@ function CardsList(props: props) {
     getBooks();
   });
 
-  var operCheck =
-    props.checkComplete === 0
-      ? { 0: 0, 31: 31, 100: 100 }
-      : props.checkComplete === 31
-      ? { 31: 31 }
-      : { 100: 100 };
+  let operCheck:
+    | {
+        0: number;
+        31: number;
+        100: number;
+      }
+    | {
+        31: number;
+        0?: undefined;
+        100?: undefined;
+      }
+    | {
+        100: number;
+        0?: undefined;
+        31?: undefined;
+      };
+  if (props.checkComplete === 0) {
+    operCheck = { 0: 0, 31: 31, 100: 100 };
+  } else if (props.checkComplete === 31) {
+    operCheck = { 31: 31 };
+  } else {
+    operCheck = { 100: 100 };
+  }
 
-  var emptyBooks =
+  let emptyBooks =
     books.filter((item) => item.complete === props.checkComplete).length ===
     0 ? (
       <Typography variant="h4" fontWeight={700}>
@@ -57,8 +74,6 @@ function CardsList(props: props) {
     <Box
       display={"flex"}
       width="90%"
-      // padding={"10% 0%"}
-      // paddingLeft={"5%"}
       height="auto"
       flexWrap={"wrap"}
       justifyContent={"center"}
@@ -68,7 +83,7 @@ function CardsList(props: props) {
         .filter((item) => item.complete in operCheck)
         .map((card, key) => {
           return (
-            <Box width={"30%"} paddingTop={"25px"}>
+            <Box width={"30%"} paddingTop={"25px"} key={key}>
               <Cards
                 id={card.id}
                 image={card.src}

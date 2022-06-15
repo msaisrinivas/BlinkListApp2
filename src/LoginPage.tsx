@@ -2,7 +2,6 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { Box, Typography } from '@mui/material';
 import React from 'react'
 import Buttons from './Components/atoms/Button';
-import Header from './Components/organisms/Header';
 
 function LoginPage() {
     const { loginWithRedirect } = useAuth0();

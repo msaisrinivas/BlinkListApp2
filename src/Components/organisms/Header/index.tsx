@@ -7,17 +7,16 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Search from "../../../images/search.svg";
 import Avatars from "../../atoms/Avatar";
 import ExtendedNav from "../ExtendedNav";
-// import zIndex from "@mui/material/styles/zIndex";
 import { useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import zIndex from "@material-ui/core/styles/zIndex";
 
-interface props {
+interface Props {
   avatarIcon: boolean;
   chars?:string;
 }
 
-function Header(props: props) {
+function Header(props: Props) {
   let navigate = useNavigate();
 
   let libraryPage = () => {
@@ -39,7 +38,7 @@ function Header(props: props) {
     setLogouttry(!logouttry);
   };
 
-  var ava;
+  let ava;
   if (props.avatarIcon) {
     ava = (
       <Box

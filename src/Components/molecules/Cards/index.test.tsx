@@ -47,9 +47,3 @@ it("Cards Test For Finished true",async () => {
     const CardsElement = screen.getByRole("button");
     expect(CardsElement).toBeInTheDocument();
 })
-
-it("Cards Test For ReadAgain true",async () => {
-    render(<BrowserRouter> <Cards id={0} image={""} bookName={"Don't ask"} authorName={"Erica"} read={"13"} time={0} readAgain={true} progressValues={100} progress={true}></Cards> </BrowserRouter>);
-    const CardsElement = screen.getByRole("button");
-    expect(CardsElement).toBeInTheDocument();
-})

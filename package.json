@@ -15,6 +15,7 @@
     "@mui/material": "^5.8.3",
     "@mui/styles": "^5.8.4",
     "@mui/utils": "^5.8.4",
+    "@storybook/react": "^6.5.9",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -53,14 +54,16 @@
       "last 1 safari version"
     ]
   },
-  "jest":{
-    "coveragePathIgnorePatterns":[
+  "jest": {
+    "coveragePathIgnorePatterns": [
       "<rootDir>/src/App.tsx",
       "<rootDir>/src/LoginPage.tsx",
       "<rootDir>/src/Routing.tsx",
       "<rootDir>/src/index.tsx",
       "<rootDir>/src/reportWebVitals.ts",
       "<rootDir>/src/Components/Pages/",
+      "<rootDir>/src/Components/molecules/CardsList/",
+      "<rootDir>/src/api/api.tsx",
       ".stories.tsx"
     ]
   }

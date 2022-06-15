@@ -35,17 +35,6 @@
   flex-grow: 0;
 }
 
-Icons {
-  /* atoms/icons */
-  width: 24px;
-  height: 24px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
 
 input {
   /* Search by title or author */
@@ -57,7 +46,7 @@ input {
 
   /* beta/body 2 */
 
-  font-family: "Cera Pro";
+  font-family: "san-serif";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

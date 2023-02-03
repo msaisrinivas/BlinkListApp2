@@ -46,7 +46,7 @@ interface BookProps {
   aboutAuthor: string;
 }
 
-interface Props {
+interface MediaCardProps {
   id: number;
   image: string;
   bookName: string;
@@ -61,13 +61,12 @@ interface Props {
   key?: number;
 }
 
-function MediaCards(props: Props) {
-
+function MediaCards(props: MediaCardProps) {
   let navigate = useNavigate();
 
-  let bookdetPage = (bookId:number) =>{
-    navigate("/bookdet/"+bookId);
-  }
+  let bookdetPage = (bookId: number) => {
+    navigate("/bookdet/" + bookId);
+  };
   const classes = useStyles();
 
   const [books, setBooks] = useState<BookProps>();
@@ -83,14 +82,11 @@ function MediaCards(props: Props) {
       if (books !== undefined) {
         books.complete = 31;
       }
-    }
-    else if(props.librarybu){
+    } else if (props.librarybu) {
       if (books !== undefined) {
-        if(books.complete === 0 || books.complete === 100)
-        {
+        if (books.complete === 0 || books.complete === 100) {
           books.complete = 31;
-        }
-        else{
+        } else {
           books.complete = 100;
         }
       }
@@ -99,12 +95,16 @@ function MediaCards(props: Props) {
   };
 
   const getingBookById = async () => {
-    const response = await api.get(
-      "http://localhost:3001/books/" + props.id + "/"
-    );
-    const data = response.data;
-    setBooks(data);
-    setLoad(true);
+    try {
+      const response = await api.get(
+        "http://localhost:3001/books/" + props.id + "/"
+      );
+      const data = response.data;
+      setBooks(data);
+      setLoad(true);
+    } catch {
+      console.log("Book with Id Not Found");
+    }
   };
 
   const buttonFunction = async () => {
@@ -131,42 +131,37 @@ function MediaCards(props: Props) {
 
   let libraryAction;
   if (props.librarybu) {
-    if(props.progressValues === 31)
-    {
+    if (props.progressValues === 31) {
       libraryAction = (
         <Button
-        name="Finished"
-        classing="library"
-        icon={undefined}
-        onClick={buttonFunction}
-        end={undefined}
-      />
-        );
-    }
-    else if(props.progressValues === 0)
-    {
+          name="Finished"
+          classing="library"
+          icon={undefined}
+          onClick={buttonFunction}
+          end={undefined}
+        />
+      );
+    } else if (props.progressValues === 0) {
       libraryAction = (
-      <Button
-        name="Add to library"
-        classing="library"
-        icon={<AddIcon />}
-        onClick={buttonFunction}
-        end={undefined}
-      />
+        <Button
+          name="Add to library"
+          classing="library"
+          icon={<AddIcon />}
+          onClick={buttonFunction}
+          end={undefined}
+        />
+      );
+    } else {
+      libraryAction = (
+        <Button
+          name="Read again"
+          classing="library"
+          icon={undefined}
+          onClick={buttonFunction}
+          end={undefined}
+        />
       );
     }
-    else{
-      libraryAction = (
-        <Button
-        name="Read again"
-        classing="library"
-        icon={undefined}
-        onClick={buttonFunction}
-        end={undefined}
-      />
-        );
-    }
-    
   }
 
   let finishedAction;
@@ -215,8 +210,11 @@ function MediaCards(props: Props) {
             component="div"
             padding={"3px 0px"}
           >
-            <Link sx={{textDecoration:"none", color:"inherit"}} onClick={() => bookdetPage(props.id)}>
-            {props.bookName}
+            <Link
+              sx={{ textDecoration: "none", color: "inherit" }}
+              onClick={() => bookdetPage(props.id)}
+            >
+              {props.bookName}
             </Link>
           </Typography>
           <Typography
@@ -230,14 +228,17 @@ function MediaCards(props: Props) {
           >
             {props.authorName}
           </Typography>
-          <Box style={{ display: "flex", justifyContent: "space-between" }} padding={"8px 0px"}>
+          <Box
+            style={{ display: "flex", justifyContent: "space-between" }}
+            padding={"8px 0px"}
+          >
             <IconText
-              name={props.time+"-minutes read"}
+              name={props.time + "-minutes read"}
               icon={<Time style={{ height: "16.67px", width: "16.67px" }} />}
               styling={"cardText"}
             />
             <IconText
-              name={props.read+" reads"}
+              name={props.read + " reads"}
               icon={
                 <PermIdentitySharpIcon
                   style={{ height: "16.67px", width: "16.67px" }}

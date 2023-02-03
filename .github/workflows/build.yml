@@ -16,7 +16,7 @@ jobs:
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
       - name: Test and coverage
-        run: npm test
+        run: npm test -- --watchALl --coverage
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:

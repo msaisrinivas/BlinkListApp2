@@ -18,20 +18,24 @@ interface BookProps {
   aboutAuthor: string;
 }
 
-interface Props {
+interface CardListProps {
   librarybu?: boolean;
   finished?: boolean;
   readAgain?: boolean;
   checkComplete: number;
 }
 
-function CardsList(props: Props) {
+function CardsList(props: CardListProps) {
   const [books, setBooks] = useState<BookProps[]>([]);
 
   const getBooks = async () => {
-    const response = await api.get("http://localhost:3001/books");
-    const data = response.data;
-    setBooks(data);
+    try {
+      const response = await api.get("http://localhost:3001/books");
+      const data = response.data;
+      setBooks(data);
+    } catch {
+      console.log("error");
+    }
   };
 
   useEffect(() => {

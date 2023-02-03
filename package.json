@@ -1,6 +1,7 @@
 {
   "name": "blinklist-app",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^1.10.1",
@@ -23,6 +24,7 @@
     "@types/node": "^16.11.39",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
+    "axios": "0.27.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
@@ -33,10 +35,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test ",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "start-server": "json-server -p 3001 --watch src/Data/db.json"
   },
   "eslintConfig": {
     "extends": [
@@ -75,7 +78,7 @@
       "<rootDir>/src/reportWebVitals.ts",
       "<rootDir>/src/Components/Pages/",
       "<rootDir>/src/Components/molecules/Cards",
-      "<rootDir>/src/api/api.tsx",
+      "src/api/api.tsx",
       ".stories.tsx"
     ]
   },
@@ -90,6 +93,7 @@
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/testing-library": "^0.0.13",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "json-server": "^0.17.1",
     "prop-types": "^15.8.1",
     "webpack": "^5.73.0"
   }

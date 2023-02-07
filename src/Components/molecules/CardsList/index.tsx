@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import api from "../../../api/api";
 import Cards from "../Cards";
+import axios from "axios";
 
 interface BookProps {
   id: number;
@@ -29,7 +29,7 @@ function CardsList(props: CardListProps) {
   const [books, setBooks] = useState<BookProps[]>([]);
 
   const getBooks = async () => {
-    const response = await api.get("http://localhost:3001/books");
+    const response = await axios.get("http://localhost:3001/books");
     const data = response.data;
     setBooks(data);
   };

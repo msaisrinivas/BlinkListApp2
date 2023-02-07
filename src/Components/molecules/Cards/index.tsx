@@ -95,16 +95,11 @@ function MediaCards(props: MediaCardProps) {
   };
 
   const getingBookById = async () => {
-    try {
-      const response = await api.get(
-        "http://localhost:3001/books/" + props.id + "/"
-      );
-      const data = response.data;
-      setBooks(data);
-      setLoad(true);
-    } catch {
-      console.log("Book with Id Not Found");
-    }
+    const response = await api.get(
+      "http://localhost:3001/books/" + props.id + "/"
+    );
+    setBooks(response.data);
+    setLoad(true);
   };
 
   const buttonFunction = async () => {

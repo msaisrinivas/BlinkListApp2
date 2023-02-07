@@ -70,6 +70,9 @@
     ]
   },
   "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/axios.js"
+    },
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/App.tsx",
       "<rootDir>/src/LoginPage.tsx",

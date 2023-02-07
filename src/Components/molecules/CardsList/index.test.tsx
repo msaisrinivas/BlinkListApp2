@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import CardsList from ".";
 
 it("CardsList Test", async () => {
-  render(<CardsList checkComplete={0} librarybu={true} />);
+  await render(<CardsList checkComplete={0} librarybu={true} />);
   const cardsListElement = screen.getByText(/No Books to Show/i);
   expect(cardsListElement).toBeInTheDocument();
 });
@@ -51,7 +51,6 @@ it("CardsList Test", async () => {
 
 //   axios.mockResolvedValue({data : books})
 //   axios.onGet("http://localhost:3001/books/1").reply(200,books[0]);
-
 
 //   const changedElement  = screen.getAllByText("Bring Your Human to Work");
 //   expect(changedElement).toBeInTheDocument();

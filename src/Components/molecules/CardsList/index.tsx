@@ -29,13 +29,9 @@ function CardsList(props: CardListProps) {
   const [books, setBooks] = useState<BookProps[]>([]);
 
   const getBooks = async () => {
-    try {
-      const response = await api.get("http://localhost:3001/books");
-      const data = response.data;
-      setBooks(data);
-    } catch {
-      console.log("error");
-    }
+    const response = await api.get("http://localhost:3001/books");
+    const data = response.data;
+    setBooks(data);
   };
 
   useEffect(() => {

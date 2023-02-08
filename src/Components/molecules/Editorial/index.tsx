@@ -1,39 +1,36 @@
-import { List, ListItem, ListItemText} from "@mui/material";
+import { List, ListItem, ListItemText } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
 
-const useStyle=makeStyles({
-    heading:{
-        fontFamily:'Cera Pro !important' ,
-            fontWeight:'700 !important',
-            fontSize:'16px !important',
-            lineHeight:'24px !important',
-    },
-    iteming:{
-      fontFamily:'Cera Pro !important' ,
-          fontWeight:'400 !important',
-          fontSize:'16px !important',
-          lineHeight:'24px !important',
+const useStyle = makeStyles({
+  heading: {
+    fontFamily: "Cera Pro !important",
+    fontWeight: "700 !important",
+    fontSize: "16px !important",
+    lineHeight: "24px !important",
+  },
+  iteming: {
+    fontFamily: "Cera Pro !important",
+    fontWeight: "400 !important",
+    fontSize: "16px !important",
+    lineHeight: "24px !important",
   },
 });
 
-interface Props{
-  listHead:string;
-  listingItems:string[];
+interface Props {
+  listHead: string;
+  listingItems: string[];
 }
 
-function Editorial(props:Props) {
-
+function Editorial(props: Props) {
   const classes = useStyle();
 
   const trying = props.listingItems;
-  const listing = trying.map((item, key) =>
-  <ListItem style={{ padding: "0px" }} key={key} >
-  <ListItemText secondary={item} classes={{secondary:classes.iteming}}/>
-</ListItem>
-  );
-  
-    
+  const listing = trying.map((item) => (
+    <ListItem style={{ padding: "0px" }} key={item}>
+      <ListItemText secondary={item} classes={{ secondary: classes.iteming }} />
+    </ListItem>
+  ));
 
   return (
     <List
@@ -46,10 +43,12 @@ function Editorial(props:Props) {
         flexDirection: "column",
         alignItems: "flex-start",
       }}
-
     >
       <ListItem style={{ padding: "0px" }}>
-        <ListItemText classes={{primary:classes.heading}} primary={props.listHead}/>
+        <ListItemText
+          classes={{ primary: classes.heading }}
+          primary={props.listHead}
+        />
       </ListItem>
       {listing}
     </List>

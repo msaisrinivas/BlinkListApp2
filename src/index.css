@@ -1,11 +1,11 @@
-* {
-  font-family: "Cera Pro";
-  font-style: normal;
-  text-transform: none;
-}
-
 @font-face {
   font-family: "Cera Pro"; /*Can be any text*/
   src: local("Cera Pro Black"),
     url("../public/fonts/Cera\ Pro\ Black.otf") format("opentype");
+}
+
+* {
+  font-family: "Cera Pro", "Arial";
+  font-style: normal;
+  text-transform: none;
 }

@@ -79,7 +79,7 @@ function CardsList(props: CardListProps) {
         .filter((item) => item.complete in operCheck)
         .map((card, key) => {
           return (
-            <Box width={"30%"} paddingTop={"25px"} key={key}>
+            <Box width={"30%"} paddingTop={"25px"} key={card.id}>
               <Cards
                 id={card.id}
                 image={card.src}
@@ -90,7 +90,7 @@ function CardsList(props: CardListProps) {
                 finished={props.finished}
                 readAgain={props.readAgain}
                 progressValues={card.complete}
-                key={key}
+                key={card.id}
                 read={card.numberOfReads}
                 time={card.timeTakenToRead}
               ></Cards>

@@ -64,16 +64,16 @@ function ExtendedNav() {
               <Box
                 flexBasis={"33.3333333333%"}
                 paddingBottom={"28px"}
-                key={key}
+                key={data.title}
               >
                 <Link
                   sx={{ textDecoration: "None" }}
                   onClick={allBooksPage}
-                  data-testid={"link-a"+key}
+                  data-testid={"link-a" + key}
                 >
                   <IconText
                     name={data.title}
-                    key={key}
+                    key={data.title}
                     icon={data.icon}
                     styling={"extended"}
                   />
